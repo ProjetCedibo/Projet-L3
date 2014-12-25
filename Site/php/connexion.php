@@ -6,7 +6,7 @@ include 'bibli_bd.php';
 $err = (isset($_POST['pseudo'])) ? traitement_connexion() : 0;
 
 session_start();
-
+$co = bd_Connecter();
 ob_start();
 
 $connecte = ifconnect();
@@ -60,6 +60,7 @@ ob_end_flush();
  *  @return     int     -1 si la connexion a échouée (mauvaise combinaison login/password)
  */
 function traitement_connexion() {
+    echo 'coucou';
 
     // connexion à la base de données   
     $co = bd_Connecter();
@@ -69,7 +70,8 @@ function traitement_connexion() {
     $password = db_protect($co, $_POST['password']);
 
     // requête SQL
-    $sql = "SELECT * FROM Admin  WHERE `AdminPseudo` = '$pseudo' AND `AdminPassWord`= sha1('$password')";
+    //$sql = "SELECT * FROM Admin  WHERE `AdminPseudo` = '$pseudo' AND `AdminPassWord`= sha1('$password')";
+    $sql = "SELECT * FROM Admin  WHERE `AdminPseudo` = 'Admin' AND `AdminPassWord`= sha1('Admin')";
     
     // execution de la requête
     $res = mysqli_query($co, $sql) or fd_bd_erreur($co, $sql);
@@ -94,7 +96,7 @@ function traitement_connexion() {
     mysqli_close($co);
     
     // et redirection
-    redirection('0',"../index.php");
+    redirection('0','../index.php');
     
     // ne devrait pas arriver
     return 0;

@@ -1,6 +1,9 @@
 <?php
 
 include 'bibli_generale.php';
+include 'bibli_bd.php';
+
+$err = (isset($_POST['pseudo'])) ? traitement_connexion() : 0;
 
 session_start();
 
@@ -16,18 +19,34 @@ if($connecte==true){
 
 
 ?>
-<section class="login">
-    <div class="titulo">Staff Login</div>
-    <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-        <input type="text" required title="Username required" placeholder="Username" data-icon="U">
-        <input type="password" required title="Password required" placeholder="Password" data-icon="x">
-        <div class="olvido">
-            <div class="col"><a href="#" title="Recuperar Password">Fotgot Password?</a></div>
-        </div>
-        <a href="#" class="enviar">Submit</a>
-    </form>
-</section>
+<div class="container">
+
+      <div id="login">
+
+        <h2><span class="fontawesome-lock"></span>Administration</h2>
+
+        <form action="connexion.php" method="POST">
+
+          <fieldset>
+
+            <p><label for="pseudo">Pseudo</label></p>
+            <p><input type="text" id="pseudo" placeholder="pseudo"></p>
+
+            <p><label for="password">Password</label></p>
+            <p><input type="password" id="password" placeholder="password"></p>
+
+            <p><input type="submit" value="Connexion" name="btnConnexion"></p>
+
+          </fieldset>
+
+        </form>
+
+      </div> <!-- end login -->
+
+    </div>
+
 <?php
+
 
 
 html_fin();
@@ -35,5 +54,50 @@ html_fin();
 ob_end_flush();
 
 
+/** 
+ *  Traitement de la connexion : 
+ *      identification du couple pseudo/password dans la base. Redirection vers l'index
+ *  @return     int     -1 si la connexion a échouée (mauvaise combinaison login/password)
+ */
+function traitement_connexion() {
+
+    // connexion à la base de données   
+    $co = bd_Connecter();
+
+    // sanitization des données postées
+    $pseudo = db_protect($co, $_POST['pseudo']);
+    $password = db_protect($co, $_POST['password']);
+
+    // requête SQL
+    $sql = "SELECT * FROM Admin  WHERE `AdminPseudo` = '$pseudo' AND `AdminPassWord`= sha1('$password')";
+    
+    // execution de la requête
+    $res = mysqli_query($co, $sql) or fd_bd_erreur($co, $sql);
+
+    // test de l'existence d'un client ayant cette combinaison email/password
+    if (mysqli_num_rows($res) != 1) {
+        mysqli_free_result($res);
+        mysqli_close($co);
+        return -1;  
+    }
+    
+    // récupération du numero client 
+    $t = mysqli_fetch_assoc($res);
+    $id = $t['AdminId'];
+    
+    // ouverture de la session
+    session_start();
+    $_SESSION['ID'] = $id;
+
+    // fermeture des ressources et de la connexion à la base
+    mysqli_free_result($res);
+    mysqli_close($co);
+    
+    // et redirection
+    redirection('0',"../index.php");
+    
+    // ne devrait pas arriver
+    return 0;
+}
 
 ?>

@@ -405,6 +405,7 @@
 				82859C0B1A4CDD8400161E98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82859C0C1A4CDD8400161E98 /* Build configuration list for PBXNativeTarget "appliTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				82859C0E1A4CDD8400161E98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

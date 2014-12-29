@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var Test: UIButton!
+    
 
+    @IBOutlet var bar: UIView!
 }
 

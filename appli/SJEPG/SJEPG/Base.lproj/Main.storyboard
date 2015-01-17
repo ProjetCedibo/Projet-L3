@@ -4,17 +4,18 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Left Menu View-->
         <scene sceneID="bjP-mP-WtM">
             <objects>
-                <viewController id="7NP-pB-XtS" sceneMemberID="viewController">
+                <viewController id="7NP-pB-XtS" customClass="LeftMenuView" customModule="SJEPG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V1t-gz-tuk"/>
                         <viewControllerLayoutGuide type="bottom" id="fgH-pu-ux6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LgU-bj-y0j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.94519348609392373" green="1" blue="0.21691832207639994" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="554-Ok-kFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,6 +38,7 @@
                     <navigationItem key="navigationItem" id="jtC-l7-b3o">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="ImagehamburgerMenu" id="2E1-VN-ffh">
                             <inset key="imageInsets" minX="-17" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" red="1" green="0.1574299713" blue="0.22843345779999999" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>

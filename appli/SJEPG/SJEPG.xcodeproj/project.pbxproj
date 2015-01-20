@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		82C88AFE1A67C4E100D3ED24 /* LeftMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C88AFD1A67C4E100D3ED24 /* LeftMenuView.swift */; };
+		82CD36551A6DC6A900067D19 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CD36541A6DC6A900067D19 /* WebViewController.swift */; };
 		82D075A81A6B3D1A00E0EBB2 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D075A71A6B3D1A00E0EBB2 /* ContainerViewController.swift */; };
 		82D60D3B1A67330400FA720A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D60D3A1A67330400FA720A /* AppDelegate.swift */; };
-		82D60D3D1A67330400FA720A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D60D3C1A67330400FA720A /* ViewController.swift */; };
+		82D60D3D1A67330400FA720A /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D60D3C1A67330400FA720A /* CenterViewController.swift */; };
 		82D60D401A67330400FA720A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D60D3E1A67330400FA720A /* Main.storyboard */; };
 		82D60D421A67330400FA720A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D60D411A67330400FA720A /* Images.xcassets */; };
 		82D60D451A67330400FA720A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D60D431A67330400FA720A /* LaunchScreen.xib */; };
@@ -29,11 +30,12 @@
 
 /* Begin PBXFileReference section */
 		82C88AFD1A67C4E100D3ED24 /* LeftMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuView.swift; sourceTree = "<group>"; };
+		82CD36541A6DC6A900067D19 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		82D075A71A6B3D1A00E0EBB2 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		82D60D351A67330400FA720A /* SJEPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJEPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D60D391A67330400FA720A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82D60D3A1A67330400FA720A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82D60D3C1A67330400FA720A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		82D60D3C1A67330400FA720A /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		82D60D3F1A67330400FA720A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82D60D411A67330400FA720A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		82D60D441A67330400FA720A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -82,8 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				82D60D3A1A67330400FA720A /* AppDelegate.swift */,
-				82D60D3C1A67330400FA720A /* ViewController.swift */,
+				82D60D3C1A67330400FA720A /* CenterViewController.swift */,
 				82D075A71A6B3D1A00E0EBB2 /* ContainerViewController.swift */,
+				82CD36541A6DC6A900067D19 /* WebViewController.swift */,
 				82C88AFD1A67C4E100D3ED24 /* LeftMenuView.swift */,
 				82D60D3E1A67330400FA720A /* Main.storyboard */,
 				82D60D411A67330400FA720A /* Images.xcassets */,
@@ -219,8 +222,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C88AFE1A67C4E100D3ED24 /* LeftMenuView.swift in Sources */,
-				82D60D3D1A67330400FA720A /* ViewController.swift in Sources */,
+				82D60D3D1A67330400FA720A /* CenterViewController.swift in Sources */,
 				82D075A81A6B3D1A00E0EBB2 /* ContainerViewController.swift in Sources */,
+				82CD36551A6DC6A900067D19 /* WebViewController.swift in Sources */,
 				82D60D3B1A67330400FA720A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

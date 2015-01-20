@@ -8,6 +8,8 @@
 
 import UIKit
 
-class LeftMenuView: UIViewController {
-
+class LeftMenuView: UIViewController{
+ 
+    
 }
+

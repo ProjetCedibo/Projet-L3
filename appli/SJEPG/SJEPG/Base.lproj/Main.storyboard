@@ -36,7 +36,7 @@
         <!--Left View Controller-->
         <scene sceneID="oSa-Nb-w6V">
             <objects>
-                <viewController storyboardIdentifier="LeftViewController" title="Left View Controller" id="F90-Vx-fhj" customClass="LeftMenuView" customModule="SJEPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftMenuView" title="Left View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F90-Vx-fhj" customClass="LeftMenuView" customModule="SJEPG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LxU-8J-Ve0"/>
                         <viewControllerLayoutGuide type="bottom" id="ZcP-5a-P9L"/>
@@ -418,10 +418,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uht-Lb-qdy">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDg-dY-2u9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
@@ -454,77 +450,63 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ba8-hu-24j">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="koz-xf-G0d" firstAttribute="top" secondItem="Uht-Lb-qdy" secondAttribute="bottom" constant="44" id="BW9-Hh-jJ5"/>
-                            <constraint firstItem="Uht-Lb-qdy" firstAttribute="top" secondItem="5gd-oz-KA7" secondAttribute="bottom" id="C4V-YS-jV1"/>
-                            <constraint firstItem="Uht-Lb-qdy" firstAttribute="top" secondItem="cRJ-w7-GPv" secondAttribute="topMargin" id="DVc-l5-uGa"/>
-                            <constraint firstItem="Uht-Lb-qdy" firstAttribute="top" secondItem="5gd-oz-KA7" secondAttribute="bottom" id="II1-5U-VXm"/>
-                            <constraint firstItem="Uht-Lb-qdy" firstAttribute="leading" secondItem="cRJ-w7-GPv" secondAttribute="leadingMargin" constant="-16" id="JWD-HA-hgN"/>
+                            <constraint firstItem="koz-xf-G0d" firstAttribute="top" secondItem="ba8-hu-24j" secondAttribute="bottom" constant="44" id="3Aw-Sv-NkH"/>
+                            <constraint firstItem="ba8-hu-24j" firstAttribute="top" secondItem="5gd-oz-KA7" secondAttribute="bottom" id="5tn-it-WYY"/>
+                            <constraint firstItem="ba8-hu-24j" firstAttribute="leading" secondItem="cRJ-w7-GPv" secondAttribute="leadingMargin" constant="-16" id="69S-54-wmv"/>
                             <constraint firstAttribute="centerX" secondItem="tDg-dY-2u9" secondAttribute="centerX" id="TRq-rf-GCy"/>
-                            <constraint firstItem="Uht-Lb-qdy" firstAttribute="leading" secondItem="cRJ-w7-GPv" secondAttribute="leadingMargin" constant="-16" id="U5F-4R-2Ax"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uht-Lb-qdy" secondAttribute="trailing" constant="-16" id="W5m-sd-Nho"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uht-Lb-qdy" secondAttribute="trailing" constant="-16" id="XOM-Us-NHN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uht-Lb-qdy" secondAttribute="trailing" constant="-16" id="fKZ-4g-EO9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tDg-dY-2u9" secondAttribute="trailing" constant="-16" id="hd3-GX-8S8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ba8-hu-24j" secondAttribute="trailing" constant="-16" id="hsh-HF-bb8"/>
                             <constraint firstItem="koz-xf-G0d" firstAttribute="top" secondItem="tDg-dY-2u9" secondAttribute="bottom" id="l9J-zP-ofD"/>
                             <constraint firstItem="tDg-dY-2u9" firstAttribute="leading" secondItem="cRJ-w7-GPv" secondAttribute="leadingMargin" constant="-16" id="lsw-uI-c2b"/>
                             <constraint firstItem="koz-xf-G0d" firstAttribute="top" secondItem="tDg-dY-2u9" secondAttribute="bottom" id="nxb-MA-Wig"/>
                             <constraint firstItem="koz-xf-G0d" firstAttribute="top" secondItem="tDg-dY-2u9" secondAttribute="bottom" id="o2L-ni-puw"/>
-                            <constraint firstItem="Uht-Lb-qdy" firstAttribute="leading" secondItem="cRJ-w7-GPv" secondAttribute="leadingMargin" constant="-16" id="pws-Te-nUn"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Uht-Lb-qdy"/>
                                 <exclude reference="tDg-dY-2u9"/>
+                                <exclude reference="ba8-hu-24j"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="C4V-YS-jV1"/>
-                                <exclude reference="DVc-l5-uGa"/>
-                                <exclude reference="II1-5U-VXm"/>
-                                <exclude reference="JWD-HA-hgN"/>
-                                <exclude reference="U5F-4R-2Ax"/>
-                                <exclude reference="W5m-sd-Nho"/>
-                                <exclude reference="XOM-Us-NHN"/>
-                                <exclude reference="fKZ-4g-EO9"/>
-                                <exclude reference="pws-Te-nUn"/>
-                                <exclude reference="TRq-rf-GCy"/>
-                                <exclude reference="hd3-GX-8S8"/>
-                                <exclude reference="lsw-uI-c2b"/>
-                                <exclude reference="BW9-Hh-jJ5"/>
+                                <exclude reference="3Aw-Sv-NkH"/>
                                 <exclude reference="l9J-zP-ofD"/>
                                 <exclude reference="nxb-MA-Wig"/>
                                 <exclude reference="o2L-ni-puw"/>
+                                <exclude reference="TRq-rf-GCy"/>
+                                <exclude reference="hd3-GX-8S8"/>
+                                <exclude reference="lsw-uI-c2b"/>
+                                <exclude reference="5tn-it-WYY"/>
+                                <exclude reference="69S-54-wmv"/>
+                                <exclude reference="hsh-HF-bb8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Uht-Lb-qdy"/>
                                 <include reference="tDg-dY-2u9"/>
+                                <include reference="ba8-hu-24j"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="C4V-YS-jV1"/>
-                                <include reference="DVc-l5-uGa"/>
-                                <include reference="II1-5U-VXm"/>
-                                <include reference="JWD-HA-hgN"/>
-                                <include reference="U5F-4R-2Ax"/>
-                                <include reference="W5m-sd-Nho"/>
-                                <include reference="XOM-Us-NHN"/>
-                                <include reference="fKZ-4g-EO9"/>
-                                <include reference="pws-Te-nUn"/>
-                                <include reference="TRq-rf-GCy"/>
-                                <include reference="hd3-GX-8S8"/>
-                                <include reference="lsw-uI-c2b"/>
-                                <include reference="BW9-Hh-jJ5"/>
+                                <include reference="3Aw-Sv-NkH"/>
                                 <include reference="l9J-zP-ofD"/>
                                 <include reference="nxb-MA-Wig"/>
                                 <include reference="o2L-ni-puw"/>
+                                <include reference="TRq-rf-GCy"/>
+                                <include reference="hd3-GX-8S8"/>
+                                <include reference="lsw-uI-c2b"/>
+                                <include reference="5tn-it-WYY"/>
+                                <include reference="69S-54-wmv"/>
+                                <include reference="hsh-HF-bb8"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="Uht-Lb-qdy" id="vk4-H7-Clj"/>
+                        <outlet property="webView" destination="ba8-hu-24j" id="glf-fm-2DB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qf0-2K-vCp" userLabel="First Responder" sceneMemberID="firstResponder"/>

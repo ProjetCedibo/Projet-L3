@@ -145,7 +145,7 @@ private extension UIStoryboard {
     class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
     
     class func leftViewController() -> LeftMenuView? {
-        return mainStoryboard().instantiateViewControllerWithIdentifier("LeftViewController") as? LeftMenuView
+        return mainStoryboard().instantiateViewControllerWithIdentifier("LeftMenuView") as? LeftMenuView
     }
     
     

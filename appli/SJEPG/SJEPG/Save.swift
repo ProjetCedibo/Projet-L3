@@ -8,8 +8,7 @@
 
 import UIKit
 
-@objc
-class Save {
+public class Save {
     
     let userName: String = ""
     let passWord: String = ""
@@ -20,6 +19,10 @@ class Save {
     init(user: String, pass: String){
         self.userName = user
         self.passWord = pass
+    }
+    
+    init(current: String){
+        self.courentSite = current
     }
     
     

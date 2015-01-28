@@ -31,12 +31,18 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="axV-Lo-BVW">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="LogInIcon"/>
+                                <color key="tintColor" red="1" green="0.24542176240106151" blue="0.23276108000949625" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="LogInIcon">
+                                    <color key="titleColor" red="1" green="0.1824160923" blue="0.3364262871" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="7GQ-dS-ehd" kind="show" id="0ur-g8-z4q"/>
+                                    <segue destination="7GQ-dS-ehd" kind="show" id="hT0-L5-svV"/>
                                 </connections>
                             </button>
-                            <color key="tintColor" red="0.47524397870319612" green="1" blue="0.60883085268517045" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="0.39387691190522278" blue="0.46823299716393163" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="ConnectionButtonPress:" destination="vXZ-lx-hvc" id="GTD-yE-86z"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -53,27 +59,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Ibd-S1-TtW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cJE-Rx-8y4" customClass="Log">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion avec vos identifiant ENT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUH-bE-BfD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion avec vos identifiants ENT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUH-bE-BfD">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="135" width="368" height="21"/>
-                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rI2-5E-2g0">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Connexion">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ConnexionPress:" destination="7GQ-dS-ehd" eventType="touchUpInside" id="zQL-GQ-wLJ"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifiant" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPX-LN-jm7">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -82,32 +75,44 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JcO-qv-xa0">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdD-kG-zXM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Connexion">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectionPush:" destination="7GQ-dS-ehd" eventType="touchUpInside" id="Xdv-P0-Y2Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BPX-LN-jm7" firstAttribute="top" secondItem="vUH-bE-BfD" secondAttribute="bottom" constant="47" id="0St-5q-hwl"/>
                             <constraint firstItem="vUH-bE-BfD" firstAttribute="leading" secondItem="cJE-Rx-8y4" secondAttribute="leadingMargin" id="1fN-bR-2c1"/>
-                            <constraint firstItem="rI2-5E-2g0" firstAttribute="top" secondItem="JcO-qv-xa0" secondAttribute="bottom" constant="103" id="4aj-Jh-RIy"/>
-                            <constraint firstAttribute="centerX" secondItem="rI2-5E-2g0" secondAttribute="centerX" id="GlH-1Z-T1I"/>
                             <constraint firstItem="JcO-qv-xa0" firstAttribute="top" secondItem="BPX-LN-jm7" secondAttribute="bottom" constant="28" id="HAp-Xg-mrY"/>
                             <constraint firstItem="JcO-qv-xa0" firstAttribute="leading" secondItem="cJE-Rx-8y4" secondAttribute="leadingMargin" id="JuN-Lt-QAJ"/>
                             <constraint firstItem="BPX-LN-jm7" firstAttribute="trailing" secondItem="cJE-Rx-8y4" secondAttribute="trailingMargin" id="LUy-Aq-LuO"/>
                             <constraint firstItem="JcO-qv-xa0" firstAttribute="trailing" secondItem="cJE-Rx-8y4" secondAttribute="trailingMargin" id="MgY-p4-Ylp"/>
                             <constraint firstItem="JcO-qv-xa0" firstAttribute="top" secondItem="BPX-LN-jm7" secondAttribute="bottom" constant="28" id="N3c-vV-FrI"/>
-                            <constraint firstItem="Ibd-S1-TtW" firstAttribute="top" secondItem="rI2-5E-2g0" secondAttribute="bottom" constant="176" id="ftN-vO-f6p"/>
+                            <constraint firstAttribute="centerX" secondItem="DdD-kG-zXM" secondAttribute="centerX" id="PlI-UY-ZdT"/>
+                            <constraint firstItem="vUH-bE-BfD" firstAttribute="top" secondItem="q9d-7z-xO2" secondAttribute="bottom" constant="71" id="oPp-cH-aKf"/>
                             <constraint firstItem="BPX-LN-jm7" firstAttribute="leading" secondItem="cJE-Rx-8y4" secondAttribute="leadingMargin" id="p3x-mq-H1b"/>
+                            <constraint firstItem="Ibd-S1-TtW" firstAttribute="top" secondItem="DdD-kG-zXM" secondAttribute="bottom" constant="164" id="ygK-qA-xcQ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vUH-bE-BfD"/>
-                                <exclude reference="rI2-5E-2g0"/>
                                 <exclude reference="BPX-LN-jm7"/>
                                 <exclude reference="JcO-qv-xa0"/>
+                                <exclude reference="DdD-kG-zXM"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1fN-bR-2c1"/>
+                                <exclude reference="oPp-cH-aKf"/>
                                 <exclude reference="0St-5q-hwl"/>
                                 <exclude reference="LUy-Aq-LuO"/>
                                 <exclude reference="p3x-mq-H1b"/>
@@ -115,20 +120,20 @@
                                 <exclude reference="JuN-Lt-QAJ"/>
                                 <exclude reference="MgY-p4-Ylp"/>
                                 <exclude reference="N3c-vV-FrI"/>
-                                <exclude reference="4aj-Jh-RIy"/>
-                                <exclude reference="GlH-1Z-T1I"/>
-                                <exclude reference="ftN-vO-f6p"/>
+                                <exclude reference="PlI-UY-ZdT"/>
+                                <exclude reference="ygK-qA-xcQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vUH-bE-BfD"/>
-                                <include reference="rI2-5E-2g0"/>
                                 <include reference="BPX-LN-jm7"/>
                                 <include reference="JcO-qv-xa0"/>
+                                <include reference="DdD-kG-zXM"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="1fN-bR-2c1"/>
+                                <include reference="oPp-cH-aKf"/>
                                 <include reference="0St-5q-hwl"/>
                                 <include reference="LUy-Aq-LuO"/>
                                 <include reference="p3x-mq-H1b"/>
@@ -136,9 +141,8 @@
                                 <include reference="JuN-Lt-QAJ"/>
                                 <include reference="MgY-p4-Ylp"/>
                                 <include reference="N3c-vV-FrI"/>
-                                <include reference="4aj-Jh-RIy"/>
-                                <include reference="GlH-1Z-T1I"/>
-                                <include reference="ftN-vO-f6p"/>
+                                <include reference="PlI-UY-ZdT"/>
+                                <include reference="ygK-qA-xcQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -150,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgn-ol-JoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="-325"/>
+            <point key="canvasLocation" x="2314.5" y="-325"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="oSa-Nb-w6V">

@@ -25,6 +25,9 @@ public class Save {
         self.courentSite = current
     }
     
+    func getUser() -> String{
+        return self.userName
+    }
     
     
 }

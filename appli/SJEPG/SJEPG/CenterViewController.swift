@@ -23,5 +23,5 @@ class CenterViewController: UIViewController {
     @IBAction func ShowLeftMenu(sender: AnyObject) {
         delegate?.toggleLeftPanel?()
     }
-    
+
 }

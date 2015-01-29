@@ -14,9 +14,16 @@ protocol CenterViewControllerDelegate {
     optional func collapseSidePanels()
 }
 
+
 class CenterViewController: UIViewController {
+
     
     var delegate: CenterViewControllerDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad();
+    }
+    
     
     // MARK: Button actions
     

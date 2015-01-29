@@ -10,7 +10,6 @@
 		82C88AFE1A67C4E100D3ED24 /* LeftMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C88AFD1A67C4E100D3ED24 /* LeftMenuView.swift */; };
 		82CD36551A6DC6A900067D19 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CD36541A6DC6A900067D19 /* WebViewController.swift */; };
 		82D075A81A6B3D1A00E0EBB2 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D075A71A6B3D1A00E0EBB2 /* ContainerViewController.swift */; };
-		82D07FD71A769DB300F6CA6E /* Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D07FD61A769DB300F6CA6E /* Save.swift */; };
 		82D07FD91A779E4A00F6CA6E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D07FD81A779E4A00F6CA6E /* LogInViewController.swift */; };
 		82D60D3B1A67330400FA720A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D60D3A1A67330400FA720A /* AppDelegate.swift */; };
 		82D60D3D1A67330400FA720A /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D60D3C1A67330400FA720A /* CenterViewController.swift */; };
@@ -34,7 +33,6 @@
 		82C88AFD1A67C4E100D3ED24 /* LeftMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuView.swift; sourceTree = "<group>"; };
 		82CD36541A6DC6A900067D19 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		82D075A71A6B3D1A00E0EBB2 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		82D07FD61A769DB300F6CA6E /* Save.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Save.swift; sourceTree = "<group>"; };
 		82D07FD81A779E4A00F6CA6E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		82D60D351A67330400FA720A /* SJEPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJEPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D60D391A67330400FA720A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 				82D60D3C1A67330400FA720A /* CenterViewController.swift */,
 				82D075A71A6B3D1A00E0EBB2 /* ContainerViewController.swift */,
 				82CD36541A6DC6A900067D19 /* WebViewController.swift */,
-				82D07FD61A769DB300F6CA6E /* Save.swift */,
 				82C88AFD1A67C4E100D3ED24 /* LeftMenuView.swift */,
 				82D07FD81A779E4A00F6CA6E /* LogInViewController.swift */,
 				82D60D3E1A67330400FA720A /* Main.storyboard */,
@@ -228,7 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82D07FD71A769DB300F6CA6E /* Save.swift in Sources */,
 				82C88AFE1A67C4E100D3ED24 /* LeftMenuView.swift in Sources */,
 				82D60D3D1A67330400FA720A /* CenterViewController.swift in Sources */,
 				82D07FD91A779E4A00F6CA6E /* LogInViewController.swift in Sources */,

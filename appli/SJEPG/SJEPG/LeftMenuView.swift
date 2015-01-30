@@ -8,8 +8,26 @@
 
 import UIKit
 
-class LeftMenuView: UIViewController{
+class LeftMenuView: UITableViewController{
  
+    @IBOutlet weak var moodleIcon: UIImageView!
+    @IBOutlet weak var AdeIcon: UIImageView!
+    @IBOutlet weak var WebMailIcon: UIImageView!
+    @IBOutlet weak var BUIcon: UIImageView!
+    @IBOutlet weak var SJEPGIcon: UIImageView!
+    @IBOutlet weak var GinkoIcon: UIImageView!
+    @IBOutlet weak var ActuIcon: UIImageView!
+    @IBOutlet weak var ContactIcon: UIImageView!
+ 
+    
+    @IBAction func MoodlePush(sender: UIButton) {
+        let vc = WebViewController(nibName: "WebViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func ADEPush(sender: UIButton) {
+    }
+    
     
     
 }

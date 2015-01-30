@@ -17,7 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Agenda" id="jtC-l7-b3o">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="ImagehamburgerMenu" id="2E1-VN-ffh">
@@ -101,9 +101,9 @@
                             <constraint firstItem="JcO-qv-xa0" firstAttribute="trailing" secondItem="cJE-Rx-8y4" secondAttribute="trailingMargin" id="MgY-p4-Ylp"/>
                             <constraint firstItem="JcO-qv-xa0" firstAttribute="top" secondItem="BPX-LN-jm7" secondAttribute="bottom" constant="28" id="N3c-vV-FrI"/>
                             <constraint firstAttribute="centerX" secondItem="DdD-kG-zXM" secondAttribute="centerX" id="PlI-UY-ZdT"/>
+                            <constraint firstItem="DdD-kG-zXM" firstAttribute="top" secondItem="JcO-qv-xa0" secondAttribute="bottom" constant="115" id="T9y-Qm-Akn"/>
                             <constraint firstItem="vUH-bE-BfD" firstAttribute="top" secondItem="q9d-7z-xO2" secondAttribute="bottom" constant="71" id="oPp-cH-aKf"/>
                             <constraint firstItem="BPX-LN-jm7" firstAttribute="leading" secondItem="cJE-Rx-8y4" secondAttribute="leadingMargin" id="p3x-mq-H1b"/>
-                            <constraint firstItem="Ibd-S1-TtW" firstAttribute="top" secondItem="DdD-kG-zXM" secondAttribute="bottom" constant="164" id="ygK-qA-xcQ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -123,7 +123,7 @@
                                 <exclude reference="MgY-p4-Ylp"/>
                                 <exclude reference="N3c-vV-FrI"/>
                                 <exclude reference="PlI-UY-ZdT"/>
-                                <exclude reference="ygK-qA-xcQ"/>
+                                <exclude reference="T9y-Qm-Akn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -144,7 +144,7 @@
                                 <include reference="MgY-p4-Ylp"/>
                                 <include reference="N3c-vV-FrI"/>
                                 <include reference="PlI-UY-ZdT"/>
-                                <include reference="ygK-qA-xcQ"/>
+                                <include reference="T9y-Qm-Akn"/>
                             </mask>
                         </variation>
                     </view>
@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="706.5" y="-998"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Left Menu View-->
         <scene sceneID="ESh-It-Rno">
             <objects>
-                <tableViewController id="WxD-9E-Gqt" sceneMemberID="viewController">
+                <tableViewController id="WxD-9E-Gqt" customClass="LeftMenuView" customModule="SJEPG" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="u6f-xm-dPT">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,7 +264,7 @@
                                                         <rect key="frame" x="59" y="9" width="300" height="30"/>
                                                     </variation>
                                                     <connections>
-                                                        <segue destination="qMC-eJ-p5N" kind="show" id="qNE-mr-ruM"/>
+                                                        <action selector="MoodlePush:" destination="WxD-9E-Gqt" eventType="touchUpInside" id="UOb-S4-Ge0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -334,6 +334,9 @@
                                                     <variation key="widthClass=compact" misplaced="YES">
                                                         <rect key="frame" x="59" y="9" width="300" height="30"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="ADEPush:" destination="WxD-9E-Gqt" eventType="touchUpInside" id="piN-1K-9R2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -783,6 +786,16 @@
                         </connections>
                     </tableView>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="ActuIcon" destination="CYK-xf-85o" id="BxQ-GR-aKK"/>
+                        <outlet property="AdeIcon" destination="APM-Bc-I6H" id="trz-AE-iT0"/>
+                        <outlet property="BUIcon" destination="1tf-dM-QSP" id="9WT-Ny-MqZ"/>
+                        <outlet property="ContactIcon" destination="tdT-hs-som" id="Lbt-q6-MvJ"/>
+                        <outlet property="GinkoIcon" destination="wNv-DX-pLG" id="74S-wP-lsV"/>
+                        <outlet property="SJEPGIcon" destination="Epr-ez-GQY" id="CYD-nZ-3xU"/>
+                        <outlet property="WebMailIcon" destination="6zr-RQ-9Rb" id="VfR-5r-ynC"/>
+                        <outlet property="moodleIcon" destination="SIx-WA-CfX" id="sDA-89-hO0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGJ-Hj-dFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

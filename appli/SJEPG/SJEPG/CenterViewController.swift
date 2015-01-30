@@ -22,6 +22,18 @@ class CenterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        // Check to see if this is an iOS 8 device.
+        if UIDevice.currentDevice().systemVersion().floatValue == 8.0 {
+            
+            // Register for push in iOS 8
+            let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert | UIUserNotificationType.Sound | UIUserNotificationType.Badge, categories: nil)
+            UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+            UIApplication.sharedApplication().registerForRemoteNotifications()
+        } else {
+            
+            // Register for push in iOS 7
+            UIApplication.sharedApplication().registerForRemoteNotificationTypes(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)
+        }
     }
     
     

@@ -28,9 +28,6 @@ class CenterViewController: UIViewController, SidePanelViewControllerDelegate {
     delegate?.toggleLeftPanel?()
   }
 
-  @IBAction func puppiesTapped(sender: AnyObject) {
-    delegate?.toggleRightPanel?()
-  }
 
   func animalSelected(animal: Animal) {
     imageView.image = animal.image

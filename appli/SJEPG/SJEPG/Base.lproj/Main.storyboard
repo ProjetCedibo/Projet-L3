@@ -171,6 +171,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Oc-Is-YY5" id="d7M-dE-A3a">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qMC-eJ-p5N" kind="presentation" trigger="accessoryAction" id="0yP-V1-Zt9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -183,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="1524" y="-998"/>
         </scene>
-        <!--Web View Controller-->
+        <!--WebViewController-->
         <scene sceneID="9fu-Ot-tzP">
             <objects>
-                <viewController id="qMC-eJ-p5N" customClass="WebViewController" customModule="SJEPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WebViewController" id="qMC-eJ-p5N" customClass="WebViewController" customModule="SJEPG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5gd-oz-KA7"/>
                         <viewControllerLayoutGuide type="bottom" id="koz-xf-G0d"/>

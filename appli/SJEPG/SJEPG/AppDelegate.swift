@@ -23,8 +23,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController = containerViewController
         window!.makeKeyAndVisible()
         
+        
+        //Notifiaction
+        var dev = UIDevice.currentDevice().systemVersion
+        println( dev)
+
+        if dev >= "8.0" {
+            // Register for push in iOS 8
+            var types: UIUserNotificationType = UIUserNotificationType.Badge |
+                UIUserNotificationType.Alert |
+                UIUserNotificationType.Sound
+            var settings: UIUserNotificationSettings = UIUserNotificationSettings( forTypes: types, categories: nil )
+            application.registerUserNotificationSettings( settings )
+            application.registerForRemoteNotifications()
+        }else{
+            // Register for push in iOS 7
+            application.registerForRemoteNotificationTypes( UIRemoteNotificationType.Badge |
+                UIRemoteNotificationType.Sound |
+                UIRemoteNotificationType.Alert )
+            
+        }
+        
+        
         // Override point for customization after application launch.
         return true
+    }
+    
+    func application( application: UIApplication!, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData! ) {
+        var characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
+        var deviceTokenString: String = ( deviceToken.description as NSString )
+            .stringByTrimmingCharactersInSet( characterSet )
+            .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
+        println( deviceToken )
+    }
+    
+    func application( application: UIApplication!, didFailToRegisterForRemoteNotificationsWithError error: NSError! ) {
+        println( error.localizedDescription )
     }
 
     func applicationWillResignActive(application: UIApplication) {

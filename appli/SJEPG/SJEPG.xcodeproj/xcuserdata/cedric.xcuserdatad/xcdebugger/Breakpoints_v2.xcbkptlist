@@ -70,29 +70,15 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SJEPG.LogInViewController.Label.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
-                  moduleName = "SJEPG"
-                  urlString = "file:///Users/cedric/Desktop/Projet/projet-app/appli/SJEPG/SJEPG/LogInViewController.swift"
-                  timestampString = "444152919.47723"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
                   symbolName = "SJEPG.LogInViewController.Label.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
                   moduleName = "SJEPG"
                   urlString = "file:///Users/cedric/Desktop/Projet/projet-app/appli/SJEPG/SJEPG/LogInViewController.swift"
-                  timestampString = "444152919.47742"
+                  timestampString = "444566498.233225"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "25">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -101,12 +87,12 @@
                   symbolName = "SJEPG.LogInViewController.Label.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
                   moduleName = "SJEPG"
                   urlString = "file:///Users/cedric/Desktop/Projet/projet-app/appli/SJEPG/SJEPG/LogInViewController.swift"
-                  timestampString = "444152919.477574"
+                  timestampString = "444566498.233375"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "25">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -115,12 +101,12 @@
                   symbolName = "SJEPG.LogInViewController.init (SJEPG.LogInViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; SJEPG.LogInViewController"
                   moduleName = "SJEPG"
                   urlString = "file:///Users/cedric/Desktop/Projet/projet-app/appli/SJEPG/SJEPG/LogInViewController.swift"
-                  timestampString = "444152919.477738"
+                  timestampString = "444566498.23351"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "53">
+                  offsetFromSymbolStart = "69">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -129,12 +115,12 @@
                   symbolName = "SJEPG.LogInViewController.init (SJEPG.LogInViewController.Type)() -&gt; SJEPG.LogInViewController"
                   moduleName = "SJEPG"
                   urlString = "file:///Users/cedric/Desktop/Projet/projet-app/appli/SJEPG/SJEPG/LogInViewController.swift"
-                  timestampString = "444152919.47788"
+                  timestampString = "444566498.233669"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "30">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -143,14 +129,30 @@
                   symbolName = "SJEPG.LogInViewController.init (SJEPG.LogInViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; SJEPG.LogInViewController"
                   moduleName = "SJEPG"
                   urlString = "file:///Users/cedric/Desktop/Projet/projet-app/appli/SJEPG/SJEPG/LogInViewController.swift"
-                  timestampString = "444152919.478021"
+                  timestampString = "444566498.233802"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "31">
+                  offsetFromSymbolStart = "37">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SJEPG/AppDelegate.swift"
+            timestampString = "444567296.717755"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

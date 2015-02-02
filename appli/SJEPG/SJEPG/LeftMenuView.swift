@@ -18,6 +18,17 @@ class LeftMenuView: UITableViewController{
     @IBOutlet weak var GinkoIcon: UIImageView!
     @IBOutlet weak var ActuIcon: UIImageView!
     @IBOutlet weak var ContactIcon: UIImageView!
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
  
     
     @IBAction func MoodlePush(sender: UIButton) {

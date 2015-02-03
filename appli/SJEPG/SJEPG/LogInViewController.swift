@@ -56,6 +56,17 @@ class LogInViewController: UIViewController {
         }
     }
     
+    @IBAction func supprimerPush(sender: UIButton) {
+        var userName = NSUserDefaults.standardUserDefaults()
+        userName.setValue("", forKey: "userName")
+        userName.synchronize()
+        var passWord = NSUserDefaults.standardUserDefaults()
+        passWord.setValue("", forKey: "passWord")
+        passWord.synchronize()
+        identifiantTextField.attributedText = nil
+        MDPTextField.attributedText = nil
+    }
+    
     //Fonction affichant l'alert (les champs sont mal rempli)
     func showAlert(){
         let alertController = UIAlertController(title: "Erreur !", message:

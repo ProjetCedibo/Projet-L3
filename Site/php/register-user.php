@@ -22,7 +22,6 @@ function addUser(){
 	$co = bd_Connecter();
 
 	$DeviceID = db_protect($co, $_POST['DeviceID']);
-	$LogIn = db_protect($co, $_POST['LogIn']);
 
 	$sql = "SELECT UserDevice FROM User WHERE UserDevice = '$DeviceID'";
 	$res = mysqli_query($co, $sql) or fd_bd_erreur($co, $sql);
@@ -32,11 +31,11 @@ function addUser(){
 	if($t == 0){
 		$sql2 = "INSERT INTO `User`(`UserDevice`, `UserLogin`) VALUES ('$DeviceID','$LogIn')";
 		mysql_query($sql2);
-	}else{
+	}
 		$date = date("j/n/Y");
 		$heure = date('h:i:s');
 		$sql3 = "INSERT INTO `Connection`(`ConnectionDate`, `ConnectionHour`, `ConnectionUser`) VALUES ('$date','$heure','$last_id')";
-	}
+	
 
 
 

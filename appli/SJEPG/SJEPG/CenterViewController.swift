@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 @objc
 protocol CenterViewControllerDelegate {
@@ -23,19 +24,24 @@ class CenterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         //ProgressView.shared.showProgressView(view)
-        /*var DeviceID = "test"
-        let URL: NSURL = NSURL(string: "http://localhost:8888/php/register-user.php")!
-        let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        let UUID = UIDevice.currentDevice().identifierForVendor.UUIDString
+        var bodyData = "DeviceID=\(UUID)"
+        println(bodyData)
+        var url: NSURL = NSURL(string: "http://localhost:8888/php/register-user.php")!
+        var request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         request.HTTPMethod = "POST"
-        request.HTTPBody = DeviceID.dataUsingEncoding(NSUTF8StringEncoding);
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+        
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()){
-            (response, data, error) in
-            var output = NSString(data: data, encoding: NSUTF8StringEncoding) // new output variable
-            var array = self.JSONParseArray(output)
-        }*/
+                
+                (response, data, error) in
+                
+                println(response)
+        }
         
         //ProgressView.shared.hideProgressView()
     }
+    
     
     
     // MARK: Button actions

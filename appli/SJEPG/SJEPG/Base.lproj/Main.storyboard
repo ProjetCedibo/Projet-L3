@@ -20,7 +20,7 @@
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Agenda" id="jtC-l7-b3o">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="ImagehamburgerMenu" id="2E1-VN-ffh">
+                        <barButtonItem key="leftBarButtonItem" image="ImagehamburgerMenu" id="2E1-VN-ffh">
                             <inset key="imageInsets" minX="-17" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <color key="tintColor" red="1" green="0.18241609232697176" blue="0.33642628709854339" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -163,6 +163,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="LeftMenuView" title="LeftMenuView" id="RXR-6n-lMp" customClass="LeftMenuView" customModule="SJEPG" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wcv-hP-YOB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

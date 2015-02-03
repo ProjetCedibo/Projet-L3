@@ -37,7 +37,7 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
         // and display bar button items in the navigation bar
         centerNavigationController = UINavigationController(rootViewController: centerViewController)
         view.addSubview(centerNavigationController.view)
-        addChildViewController(centerNavigationController)
+        //addChildViewController(centerNavigationController)
         
         centerNavigationController.didMoveToParentViewController(self)
         

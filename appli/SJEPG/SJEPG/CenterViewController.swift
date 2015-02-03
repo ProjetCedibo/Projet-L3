@@ -22,10 +22,17 @@ class CenterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        // Check to see if this is an iOS 8 device.
         //ProgressView.shared.showProgressView(view)
-        
-        
+        /*var DeviceID = "test"
+        let URL: NSURL = NSURL(string: "http://localhost:8888/php/register-user.php")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = DeviceID.dataUsingEncoding(NSUTF8StringEncoding);
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()){
+            (response, data, error) in
+            var output = NSString(data: data, encoding: NSUTF8StringEncoding) // new output variable
+            var array = self.JSONParseArray(output)
+        }*/
         
         //ProgressView.shared.hideProgressView()
     }

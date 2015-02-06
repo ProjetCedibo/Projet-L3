@@ -13,10 +13,10 @@ define('FD_QUOTES_GPC', (get_magic_quotes_gpc() == 1) ? TRUE : FALSE);
 define('IS_DEV', TRUE);
 
 // Paramètres base de données (Cedric)
-define('BD_SERVEUR', 'localhost');
+define('BD_SERVEUR', '127.0.0.1');
 define('BD_USER', 'root');
 define('BD_PASS', 'root');
-define('BD_NOM', 'UFR_SJEPG');
+define('BD_NOM', 'sjepg');
 
 
 /**
@@ -26,8 +26,19 @@ define('BD_NOM', 'UFR_SJEPG');
  * @return resource connecteur à la base de données
  */
 function bd_Connecter() {
-    $bd = mysqli_connect(BD_SERVEUR, BD_USER, BD_PASS, BD_NOM) or fd_bd_erreur($conn,'');
-        return $bd;
+    /*$bd = mysqli_connect(BD_SERVEUR, BD_USER, BD_PASS, BD_NOM) or fd_bd_erreur($conn,'Putain ca marche pas');
+        return $bd;*/
+    $db = mysql_connect("localhost","root", "root");
+
+    if (!$db){
+        echo "Could not connect to database";
+        exit();
+    }
+
+    $db_name = "sjepg";
+    if (!mysql_select_db($db_name, $db)){
+        die ("Could not select database");
+    }
 }
 
 //_______________________________________________________________

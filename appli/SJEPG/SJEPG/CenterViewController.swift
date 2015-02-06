@@ -24,25 +24,48 @@ class CenterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         //ProgressView.shared.showProgressView(view)
-        let UUID = UIDevice.currentDevice().identifierForVendor.UUIDString
-        var bodyData = "DeviceID=\(UUID)"
-        println(bodyData)
-        var url: NSURL = NSURL(string: "http://localhost:8888/php/register-user.php")!
-        var request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
-        request.HTTPMethod = "POST"
-        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()){
-                
-                (response, data, error) in
-                
-                println(response)
-        }
+        addUserOrConnextion()
         
         //ProgressView.shared.hideProgressView()
     }
     
     
+    func addUserOrConnextion(){
+        let UUID = UIDevice.currentDevice().identifierForVendor.UUIDString
+        var bodyData = "DeviceID=\(UUID)"
+        println(bodyData)
+        
+        let myUrl = NSURL(string: "http://localhost:8888/php/register-user.php");
+        
+        let request = NSMutableURLRequest(URL:myUrl!);
+        request.HTTPMethod = "POST";
+        
+        // Compose a query string
+        let postString = "DeviceID=\(UUID)";
+        
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            data, response, error in
+            
+            if error != nil
+            {
+                println("error=\(error)")
+                return
+            }
+            
+            // You can print out response object
+            println("response = \(response)")
+            
+            // Print out response body
+            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("responseString = \(responseString)")
+            
+            
+        }
+        
+        task.resume()
+    }
     
     // MARK: Button actions
     

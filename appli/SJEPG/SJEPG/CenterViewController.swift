@@ -32,7 +32,9 @@ class CenterViewController: UIViewController {
     
     func addUserOrConnextion(){
         let UUID = UIDevice.currentDevice().identifierForVendor.UUIDString
-        var bodyData = "DeviceID=\(UUID)"
+        var device = UIDevice.currentDevice().model
+        println(device)
+        var bodyData = "\nDeviceID=\(UUID)"
         println(bodyData)
         
         let myUrl = NSURL(string: "http://localhost:8888/php/register-user.php");
@@ -41,7 +43,7 @@ class CenterViewController: UIViewController {
         request.HTTPMethod = "POST";
         
         // Compose a query string
-        let postString = "DeviceID=\(UUID)";
+        let postString = "DeviceID=\(UUID)";//&DeviceModel=\(device)
         
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
         

@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="Agenda" id="jtC-l7-b3o">
                         <barButtonItem key="leftBarButtonItem" image="ImagehamburgerMenu" id="2E1-VN-ffh">

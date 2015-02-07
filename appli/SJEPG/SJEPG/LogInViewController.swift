@@ -79,7 +79,7 @@ class LogInViewController: UIViewController {
     
     
     func updateConnectionState(state: Int){
-        
+
         let UUID = UIDevice.currentDevice().identifierForVendor.UUIDString
         let myUrl = NSURL(string: "http://localhost:8888/php/update-login.php");
         
@@ -87,7 +87,7 @@ class LogInViewController: UIViewController {
         request.HTTPMethod = "POST";
         
         // Compose a query string
-        let postString = "DeviveID:\(UUID)&LogIn:\(state)";
+        let postString = "DeviveID=\(UUID)";
         
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
         

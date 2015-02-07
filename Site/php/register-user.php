@@ -12,6 +12,7 @@ ob_end_flush();
 function addUser(){
 	
 	$DeviceID = $_REQUEST['DeviceID'];
+	$DeviceModel = $_REQUEST['DeviceModel'];
 
     bd_Connecter();
 

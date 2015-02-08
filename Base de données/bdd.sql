@@ -35,6 +35,28 @@ INSERT INTO `Admin` (`AdminId`, `AdminPseudo`, `AdminPassWord`) VALUES
 
 -- --------------------------------------------------------
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `User`
+--
+
+CREATE TABLE `User` (
+`UserId` int(11) NOT NULL,
+  `UserDevice` varchar(255) NOT NULL,
+  `UserModel` varchar(100) DEFAULT NULL,
+  `UserLogin` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `User`
+--
+
+INSERT INTO `User` (`UserId`, `UserDevice`, `UserModel`, `UserLogin`) VALUES
+(19, '3DADFF63-7831-472E-AE9C-48D149806A2F', NULL, 0);
+
+-- --------------------------------------------------------
+
 --
 -- Structure de la table `Connection`
 --
@@ -43,7 +65,7 @@ CREATE TABLE `Connection` (
 `ConnectionId` int(11) NOT NULL,
   `ConnectionDate` date DEFAULT NULL,
   `ConnectionHour` time DEFAULT NULL,
-  `ConnectionUser` int(11) NOT NULL
+  `ConnectionUser` int(11) NOT NULL REFERENCES User (UserId)
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 --
@@ -72,23 +94,6 @@ CREATE TABLE `Notification` (
 
 -- --------------------------------------------------------
 
---
--- Structure de la table `User`
---
-
-CREATE TABLE `User` (
-`UserId` int(11) NOT NULL,
-  `UserDevice` varchar(255) NOT NULL,
-  `UserModel` varchar(100) DEFAULT NULL,
-  `UserLogin` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `User`
---
-
-INSERT INTO `User` (`UserId`, `UserDevice`, `UserModel`, `UserLogin`) VALUES
-(19, '3DADFF63-7831-472E-AE9C-48D149806A2F', NULL, 0);
 
 --
 -- Index pour les tables exportées

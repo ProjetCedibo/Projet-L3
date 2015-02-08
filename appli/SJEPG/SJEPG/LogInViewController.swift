@@ -87,7 +87,7 @@ class LogInViewController: UIViewController {
         request.HTTPMethod = "POST";
         
         // Compose a query string
-        let postString = "DeviveID=\(UUID)";
+        let postString = "DeviveID=\(UUID)&LogIn=\(state)";
         
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
         

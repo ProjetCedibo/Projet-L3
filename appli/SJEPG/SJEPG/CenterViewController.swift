@@ -33,6 +33,7 @@ class CenterViewController: UIViewController {
     func addUserOrConnextion(){
         let UUID = UIDevice.currentDevice().identifierForVendor.UUIDString
         var device = UIDevice.currentDevice().model
+        var devOS = UIDevice.currentDevice().systemVersion
         println(device)
         var bodyData = "\nDeviceID=\(UUID)"
         println(bodyData)
@@ -43,7 +44,7 @@ class CenterViewController: UIViewController {
         request.HTTPMethod = "POST";
         
         // Compose a query string
-        let postString = "DeviceID=\(UUID)";//&DeviceModel=\(device)
+        let postString = "DeviceID=\(UUID)&DeviceModel=\(device)&DeviceOS=\(devOS)";//
         
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding);
         

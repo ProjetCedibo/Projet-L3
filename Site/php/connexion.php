@@ -3,10 +3,9 @@
 include 'bibli_generale.php';
 include 'bibli_bd.php';
 
-$err = (isset($_POST['pseudo'])) ? traitement_connexion() : 0;
+$err = (isset($_POST['btnConnexion'])) ? traitement_connexion() : 0;
 
 session_start();
-$co = bd_Connecter();
 ob_start();
 
 $connecte = ifconnect();
@@ -25,7 +24,7 @@ if($connecte==true){
 
         <h2><span class="fontawesome-lock"></span>Administration</h2>
 
-        <form action="connexion.php" method="POST">
+        <form action="connexion.php" method="post">
 
           <fieldset>
 
@@ -63,18 +62,18 @@ function traitement_connexion() {
     echo 'coucou';
 
     // connexion à la base de données   
-    $co = bd_Connecter();
+    bd_Connecter();
 
     // sanitization des données postées
-    $pseudo = db_protect($co, $_POST['pseudo']);
-    $password = db_protect($co, $_POST['password']);
+    $pseudo = $_POST['pseudo'];
+    $password = $_POST['password'];
 
     // requête SQL
     //$sql = "SELECT * FROM Admin  WHERE `AdminPseudo` = '$pseudo' AND `AdminPassWord`= sha1('$password')";
-    $sql = "SELECT * FROM Admin  WHERE `AdminPseudo` = 'Admin' AND `AdminPassWord`= sha1('Admin')";
+    $sql = "SELECT * FROM Admin  WHERE AdminPseudo = 'Admin' AND AdminPassWord = sha5('Admin')";
     
     // execution de la requête
-    $res = mysqli_query($co, $sql) or fd_bd_erreur($co, $sql);
+    $res = mysqli_query($sql) or fd_bd_erreur($sql);
 
     // test de l'existence d'un client ayant cette combinaison email/password
     if (mysqli_num_rows($res) != 1) {
@@ -96,7 +95,7 @@ function traitement_connexion() {
     mysqli_close($co);
     
     // et redirection
-    redirection('0','../index.php');
+    redirection('0','../index.html');
     
     // ne devrait pas arriver
     return 0;

@@ -12,29 +12,29 @@ afficheBarreGauche('3');
 
 ob_end_flush();
 
-        /*<div id="page-wrapper">
+       echo '<div id="page-wrapper">',
 
-            <div class="container-fluid">
+            '<div class="container-fluid">',
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Forms
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-edit"></i> Forms
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- /.row -->
+                //!-- Page Heading -->
+                '<div class="row">',
+                    '<div class="col-lg-12">',
+                        '<h1 class="page-header">',
+                            'Forms',
+                        '</h1>',
+                        '<ol class="breadcrumb">',
+                            '<li>',
+                                '<i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>',
+                            '</li>',
+                            '<li class="active">',
+                                '<i class="fa fa-edit"></i> Forms',
+                            '</li>',
+                        '</ol>',
+                    '</div>',
+                '</div>',
+                //<!-- /.row -->
 
-                <div class="row">
+                /*<div class="row">
                     <div class="col-lg-6">
 
                         <form role="form">
@@ -241,20 +241,23 @@ ob_end_flush();
 
                         </form>
 
-                        <p>For complete documentation, please visit <a href="http://getbootstrap.com/css/#forms">Bootstrap's Form Documentation</a>.</p>
+                        <p>For complete documentation, please visit <a href="http://getbootstrap.com/css/#forms">Bootstraps Form Documentation</a>.</p>
 
                     </div>
                 </div>
-                <!-- /.row -->
+                <!-- /.row --> */
 
-            </div>
-            <!-- /.container-fluid -->
+            //'</div>',
+            //<!-- /.container-fluid -->
 
-        </div>
-        <!-- /#page-wrapper -->
+        //'</div>',
+        //<!-- /#page-wrapper -->
 
-    </div>
-    <!-- /#wrapper --> */
+    '</div>'; 
+    //<!-- /#wrapper --> 
+
+
+
 footer();
 
 ?>

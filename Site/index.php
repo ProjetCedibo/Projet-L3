@@ -10,7 +10,7 @@ afficheHeader('Index');
 afficheBarreHaute();
 afficheBarreGauche('1');
 afficheMiniBarre('1');
-
+ 
         
             /*echo   
                 '<div class="row">',

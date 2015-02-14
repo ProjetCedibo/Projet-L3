@@ -1,16 +1,16 @@
 <?php
 
-session_start();
+//session_start();
 
 include 'php/bibli_generale.php';
 
-ob_start();
+//ob_start();
 
 afficheHeader('Notifications');
 afficheBarreHaute();
 afficheBarreGauche('3');
 afficheMiniBarre('3');
-ob_end_flush();
+//ob_end_flush();
 
     echo
        
@@ -251,13 +251,8 @@ ob_end_flush();
 
                         '</div>',
                     
-                    '</div>',
+                    '</div>';
                     //<!-- /.row --> 
-
-            
-
-
-
 
 footer();
 

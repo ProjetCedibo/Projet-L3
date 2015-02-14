@@ -214,6 +214,7 @@ if ($page == 1) {
         '<a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Tableau de bord </a>',
         '</li>';
 }
+
 else {
                     
     echo 
@@ -229,6 +230,7 @@ if ($page == 2) {
              '<a href="statistiques.php"><i class="fa fa-fw fa-bar-chart-o"></i> Statistiques</a>',
             '</li>';
 }
+
 else {
         echo 
             '<li>',
@@ -260,54 +262,71 @@ echo
 
 }
 
-function afficheMiniBarre() {
+function afficheMiniBarre($page) {
     
-   echo
-        
+    if ($page == 1) {
+       
+       echo
+            
             '<div id="page-wrapper">',
 
                 '<div class="container-fluid">',
 
+                   '<div class="row">',
+                        
+                        '<div class="col-lg-12">',
 
-        '<div class="row">',
-            '<div class="col-lg-12">',
-                '<h1 class="page-header">',
-                    //page index
-                    if ($page == 1) {        
-                        echo
-                            'Administration <small>Vue générale</small>';
-                    }
-                    
-                    //page notifications
-                    if ($page == 3) {
-                        echo
-                            'Notifications';
-                    }
+                            '<h1 class="page-header">',
+                            
+                            'Administration <small> Vue générale </small>',
+                            
+                            '</h1>',
+                   
+                            '<ol class="breadcrumb">',
+
+                                '<li class="active">',
+                                    '<i class="fa fa-dashboard"></i> En bref',
+                                '</li>',
+                            
+                            '</ol>',
+                             //   }
+                        '</div>',
+                '</div>'; 
+                //<!-- /.row -->
+    }
+
+
+    if ($page == 3) {
+       
+       echo
+            
+            '<div id="page-wrapper">',
+
+                '<div class="container-fluid">',
+
+                   '<div class="row">',
+                        
+                        '<div class="col-lg-12">',
+                        
+                            '<h1 class="page-header">',
+                            
+                            'Notifications',
+                            
+                            '</h1>',
+                   
+                            '<ol class="breadcrumb">',
+
+                                '<li class="active">',
+                                    '<i class="fa fa-edit"></i> Page d\'envoi des notifications',
+                                '</li>',
+                            
+                            '</ol>',
+                 
+                    '</div>',
                 
-                '</h1>',
-                
-                '<ol class="breadcrumb">',
-                    '<li class="active">',
-                        //page index
-                        if ($page == 1) {        
-                        echo
-
-                        '<i class="fa fa-dashboard"></i> En bref';
-                        }
-
-                        //page notifications
-                        if ($page == 3) {        
-                        echo
-                        '<i class="fa fa-edit"></i> Page d\'envoi des notifications';
-                        }                
-                    
-                    '</li>',
-                '</ol>',
-            '</div>',
-        '</div>';
-    //<!-- /.row -->
-
-
+                '</div>'; 
+                //<!-- /.row -->
+    }
 }
 
 
@@ -322,13 +341,13 @@ function footer() {
 echo
 	
     '</div>',
-    '<!-- /#wrapper -->',
+    //'<!-- /.container-fluid -->',
 
     '</div>',
-    '<!-- /.container-fluid -->',
+    //'<!-- /#page-wrapper -->',
 
     '</div>',
-    '<!-- /#page-wrapper -->',
+    //'<!-- /#wrapper -->',
 
     '<!-- jQuery -->',
     '<script src="js/jquery.js"></script>',

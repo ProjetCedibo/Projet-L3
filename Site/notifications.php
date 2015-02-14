@@ -20,32 +20,29 @@ ob_end_flush();
                 '<div class="row">',
                     '<div class="col-lg-12">',
                         '<h1 class="page-header">',
-                            'Forms',
+                            'Noifications',
                         '</h1>',
                         '<ol class="breadcrumb">',
-                            '<li>',
-                                '<i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>',
-                            '</li>',
                             '<li class="active">',
-                                '<i class="fa fa-edit"></i> Forms',
+                                '<i class="fa fa-edit"></i> Page d\'envoi des notifications',
                             '</li>',
                         '</ol>',
                     '</div>',
                 '</div>',
                 //<!-- /.row -->
 
-                /*<div class="row">
-                    <div class="col-lg-6">
+                '<div class="row">',
+                    '<div class="col-lg-6">',
 
-                        <form role="form">
+                        '<form role="form">',
 
-                            <div class="form-group">
-                                <label>Text Input</label>
-                                <input class="form-control">
-                                <p class="help-block">Example block-level help text here.</p>
-                            </div>
+                            '<div class="form-group">',
+                                '<label>Text Input</label>',
+                                '<input class="form-control">',
+                                '<p class="help-block">Example block-level help text here.</p>',
+                            '</div>',
 
-                            <div class="form-group">
+                            /*<div class="form-group">
                                 <label>Text Input with Placeholder</label>
                                 <input class="form-control" placeholder="Enter text">
                             </div>
@@ -157,7 +154,7 @@ ob_end_flush();
                         </form>
 
                     </div>
-                    <div class="col-lg-6">
+                   /* <div class="col-lg-6">
                         <h1>Disabled Form States</h1>
 
                         <form role="form">
@@ -243,9 +240,9 @@ ob_end_flush();
 
                         <p>For complete documentation, please visit <a href="http://getbootstrap.com/css/#forms">Bootstraps Form Documentation</a>.</p>
 
-                    </div>
-                </div>
-                <!-- /.row --> */
+                    </div>*/
+                '</div>';
+                //<!-- /.row --> 
 
             //'</div>',
             //<!-- /.container-fluid -->
@@ -253,7 +250,7 @@ ob_end_flush();
         //'</div>',
         //<!-- /#page-wrapper -->
 
-    '</div>'; 
+    //'</div>'; 
     //<!-- /#wrapper --> 
 
 

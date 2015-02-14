@@ -87,7 +87,7 @@ function afficheBarreHaute () {
                     '<span class="icon-bar"></span>',
                     '<span class="icon-bar"></span>',
                '</button>',
-                '<a class="navbar-brand" href="index.php">Retour à l\'index</a>',
+                //'<a class="navbar-brand" href="index.php">Retour à l\'index</a>',
             '</div>',
            '<!-- Top Menu Items -->',
             '<ul class="nav navbar-right top-nav">',

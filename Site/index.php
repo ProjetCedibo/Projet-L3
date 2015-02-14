@@ -112,7 +112,9 @@ afficheMiniBarre($page);
                         '</div>',
                     '</div>',
                 '</div>',
-                '<!-- /.row -->',
+                '<!-- /.row -->';
+
+               /* //Graphique
                 '<div class="row">',
                     '<div class="col-lg-12">',
                         '<div class="panel panel-default">',
@@ -125,8 +127,10 @@ afficheMiniBarre($page);
                         '</div>',
                     '</div>',
                 '</div>',
-                '<!-- /.row -->'; 
+                '<!-- /.row -->'; */
+?>
 
+<?php
                 //Ensemble de tableaux
                 /* <div class="row">
                     <div class="col-lg-4">

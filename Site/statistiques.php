@@ -5,37 +5,13 @@ session_start();
 include 'php/bibli_generale.php';
 
 ob_start();
-
-afficheHeader('Statistiques');
+$page = 'Statistiques';
+afficheHeader($page);
 afficheBarreHaute();
-afficheBarreGauche('2');
+afficheBarreGauche($page);
+afficheMiniBarre($page); 
 
-ob_end_flush();
-
-        /*<div id="page-wrapper">
-
-            <div class="container-fluid">
-                
-                //Headinf statistiques
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Charts
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-bar-chart-o"></i> Charts
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                <!-- Flot Charts -->
+                /*<!-- Flot Charts -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="page-header">Flot Charts</h2>
@@ -194,17 +170,9 @@ ob_end_flush();
                 </div>
                 <!-- /.row -->
 
-            </div>
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- /#page-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-
    */
 
 footer();
+ob_end_flush();
 
 ?>

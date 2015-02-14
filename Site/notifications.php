@@ -5,17 +5,14 @@
 include 'php/bibli_generale.php';
 
 //ob_start();
-
-afficheHeader('Notifications');
+$page = 'Notifications';
+afficheHeader($page);
 afficheBarreHaute();
-afficheBarreGauche('3');
-afficheMiniBarre('3');
+afficheBarreGauche($page);
+afficheMiniBarre($page);
 //ob_end_flush();
 
     echo
-       
-
-
                     '<div class="row">',
                             
                         '<div class="col-lg-6">',

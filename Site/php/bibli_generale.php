@@ -208,7 +208,7 @@ echo
                 '<ul class="nav navbar-nav side-nav">';
 
 //page index          
-if ($page == 1) {
+if ($page == 'Index') {
     echo 
         '<li class="active">',
         '<a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Tableau de bord </a>',
@@ -224,7 +224,7 @@ else {
         }
                     
 //page statistiques
-if ($page == 2) {
+if ($page == 'Statistiques') {
         echo 
              '<li class="active">',
              '<a href="statistiques.php"><i class="fa fa-fw fa-bar-chart-o"></i> Statistiques</a>',
@@ -239,7 +239,7 @@ else {
 }
 
 //page notifications
-if ($page == 3) {        
+if ($page == 'Notifications') {        
         echo
              '<li class="active">',
                     ' <a href="notifications.php"><i class="fa fa-fw fa-edit"></i> Notifications </a>',
@@ -264,7 +264,7 @@ echo
 
 function afficheMiniBarre($page) {
     
-    if ($page == 1) {
+    if ($page == 'Index') {
        
        echo
             
@@ -295,8 +295,39 @@ function afficheMiniBarre($page) {
                 //<!-- /.row -->
     }
 
+    if ($page == 'Statistiques') {
+           
+           echo
+                
+                '<div id="page-wrapper">',
 
-    if ($page == 3) {
+                    '<div class="container-fluid">',
+
+                       '<div class="row">',
+                            
+                            '<div class="col-lg-12">',
+                            
+                                '<h1 class="page-header">',
+                                
+                                'Statistiques',
+                                
+                                '</h1>',
+                       
+                                '<ol class="breadcrumb">',
+
+                                    '<li class="active">',
+                                        '<i class="fa fa-edit"></i> Page de statistiques',
+                                    '</li>',
+                                
+                                '</ol>',
+                     
+                        '</div>',
+                    
+                    '</div>'; 
+                    //<!-- /.row -->
+    }
+
+    if ($page == 'Notifications') {
        
        echo
             

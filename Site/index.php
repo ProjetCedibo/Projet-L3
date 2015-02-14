@@ -1,19 +1,21 @@
 <?php
 
-//session_start();
+session_start();
 
 include 'php/bibli_generale.php';
  
-//ob_start();
-
-afficheHeader('Index');
+ob_start();
+$page = 'Index';
+afficheHeader($page);
 afficheBarreHaute();
-afficheBarreGauche('1');
-afficheMiniBarre('1');
+afficheBarreGauche($page);
+afficheMiniBarre($page);
  
         
-            /*echo   
+            echo   
                 '<div class="row">',
+                    
+                    //Détails sur les utilisateurs
                     '<div class="col-lg-3 col-md-6">',
                         '<div class="panel panel-primary">',
                             '<div class="panel-heading">',
@@ -28,6 +30,7 @@ afficheMiniBarre('1');
                                ' </div>',
                             '</div>',
                             '<a href="#">',
+                                
                                 '<div class="panel-footer">',
                                     '<span class="pull-left">Détails sur les utilisateurs</span>',
                                     '<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>',
@@ -36,6 +39,8 @@ afficheMiniBarre('1');
                             '</a>',
                         '</div>',
                     '</div>',
+                    
+                    //Nombre d'administrateurs
                     '<div class="col-lg-3 col-md-6">',
                         '<div class="panel panel-green">',
                             '<div class="panel-heading">',
@@ -58,6 +63,8 @@ afficheMiniBarre('1');
                             '</a>',
                         '</div>',
                     '</div>',
+                    
+                    //Connexions depuis le premier jour
                     '<div class="col-lg-3 col-md-6">',
                         '<div class="panel panel-yellow">',
                             '<div class="panel-heading">',
@@ -80,6 +87,8 @@ afficheMiniBarre('1');
                             '</a>',
                         '</div>',
                     '</div>',
+                    
+                    //Connexions du jour
                     '<div class="col-lg-3 col-md-6">',
                         '<div class="panel panel-red">',
                             '<div class="panel-heading">',
@@ -89,7 +98,7 @@ afficheMiniBarre('1');
                                     '</div>',
                                     '<div class="col-xs-9 text-right">',
                                         '<div class="huge">ZZ</div>',
-                                        '<div>Connexion du jour</div>',
+                                        '<div>Connexions du jour</div>',
                                     '</div>',
                                 '</div>',
                             '</div>',
@@ -104,7 +113,6 @@ afficheMiniBarre('1');
                     '</div>',
                 '</div>',
                 '<!-- /.row -->',
-
                 '<div class="row">',
                     '<div class="col-lg-12">',
                         '<div class="panel panel-default">',
@@ -117,7 +125,7 @@ afficheMiniBarre('1');
                         '</div>',
                     '</div>',
                 '</div>',
-                '<!-- /.row -->'; */
+                '<!-- /.row -->'; 
 
                 //Ensemble de tableaux
                 /* <div class="row">
@@ -214,6 +222,5 @@ afficheMiniBarre('1');
             
 
 footer();
-
-//ob_end_flush(); 
+ob_end_flush(); 
 ?>

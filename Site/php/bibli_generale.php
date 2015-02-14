@@ -257,11 +257,80 @@ echo
    ' </div>',
     '<!-- /.navbar-collapse -->',
 '</nav>';
+
 }
+
+function afficheMiniBarre() {
+    
+   echo
+        
+            '<div id="page-wrapper">',
+
+                '<div class="container-fluid">',
+
+
+        '<div class="row">',
+            '<div class="col-lg-12">',
+                '<h1 class="page-header">',
+                    //page index
+                    if ($page == 1) {        
+                        echo
+                            'Administration <small>Vue générale</small>';
+                    }
+                    
+                    //page notifications
+                    if ($page == 3) {
+                        echo
+                            'Notifications';
+                    }
+                
+                '</h1>',
+                
+                '<ol class="breadcrumb">',
+                    '<li class="active">',
+                        //page index
+                        if ($page == 1) {        
+                        echo
+
+                        '<i class="fa fa-dashboard"></i> En bref';
+                        }
+
+                        //page notifications
+                        if ($page == 3) {        
+                        echo
+                        '<i class="fa fa-edit"></i> Page d\'envoi des notifications';
+                        }                
+                    
+                    '</li>',
+                '</ol>',
+            '</div>',
+        '</div>';
+    //<!-- /.row -->
+
+
+}
+
+
+
+
+
+
+
+
 
 function footer() {
 echo
-	'<!-- jQuery -->',
+	
+    '</div>',
+    '<!-- /#wrapper -->',
+
+    '</div>',
+    '<!-- /.container-fluid -->',
+
+    '</div>',
+    '<!-- /#page-wrapper -->',
+
+    '<!-- jQuery -->',
     '<script src="js/jquery.js"></script>',
     
     '<!-- Bootstrap Core JavaScript -->',

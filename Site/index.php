@@ -1,157 +1,126 @@
 <?php
 
-session_start();
+//session_start();
 
 include 'php/bibli_generale.php';
  
-ob_start();
+//ob_start();
 
 afficheHeader('Index');
 afficheBarreHaute();
 afficheBarreGauche('1');
+afficheMiniBarre('1');
 
-?>
+        
+            /*echo   
+                '<div class="row">',
+                    '<div class="col-lg-3 col-md-6">',
+                        '<div class="panel panel-primary">',
+                            '<div class="panel-heading">',
+                                '<div class="row">',
+                                    '<div class="col-xs-3">',
+                                        '<i class="fa fa-comments fa-5x"></i>',
+                                    '</div>',
+                                    '<div class="col-xs-9 text-right">',
+                                        '<div class="huge">WW</div>',
+                                        '<div>Nombre d\'utilisateurs</div>',
+                                    '</div>',
+                               ' </div>',
+                            '</div>',
+                            '<a href="#">',
+                                '<div class="panel-footer">',
+                                    '<span class="pull-left">Détails sur les utilisateurs</span>',
+                                    '<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>',
+                                    '<div class="clearfix"></div>',
+                                '</div>',
+                            '</a>',
+                        '</div>',
+                    '</div>',
+                    '<div class="col-lg-3 col-md-6">',
+                        '<div class="panel panel-green">',
+                            '<div class="panel-heading">',
+                                '<div class="row">',
+                                    '<div class="col-xs-3">',
+                                        '<i class="fa fa-tasks fa-5x"></i>',
+                                    '</div>',
+                                    '<div class="col-xs-9 text-right">',
+                                        '<div class="huge">XX</div>',
+                                        '<div>Nombre d\'administrateurs </div>',
+                                    '</div>',
+                                '</div>',
+                            '</div>',
+                            '<a href="#">',
+                                '<div class="panel-footer">',
+                                    '<span class="pull-left">Détails sur les administrateurs</span>',
+                                    '<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>',
+                                    '<div class="clearfix"></div>',
+                                '</div>',
+                            '</a>',
+                        '</div>',
+                    '</div>',
+                    '<div class="col-lg-3 col-md-6">',
+                        '<div class="panel panel-yellow">',
+                            '<div class="panel-heading">',
+                                '<div class="row">',
+                                    '<div class="col-xs-3">',
+                                        '<i class="fa fa-shopping-cart fa-5x"></i>',
+                                    '</div>',
+                                    '<div class="col-xs-9 text-right">',
+                                        '<div class="huge">YY</div>',
+                                        '<div>Connexions depuis le premier jour</div>',
+                                    '</div>',
+                                '</div>',
+                            '</div>',
+                                '<a href="#">',
+                                '<div class="panel-footer">',
+                                    '<span class="pull-left">Détails sur les connexions</span>',
+                                    '<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>',
+                                    '<div class="clearfix"></div>',
+                                '</div>',
+                            '</a>',
+                        '</div>',
+                    '</div>',
+                    '<div class="col-lg-3 col-md-6">',
+                        '<div class="panel panel-red">',
+                            '<div class="panel-heading">',
+                               ' <div class="row">',
+                                    '<div class="col-xs-3">',
+                                        '<i class="fa fa-support fa-5x"></i>',
+                                    '</div>',
+                                    '<div class="col-xs-9 text-right">',
+                                        '<div class="huge">ZZ</div>',
+                                        '<div>Connexion du jour</div>',
+                                    '</div>',
+                                '</div>',
+                            '</div>',
+                            '<a href="#">',
+                                '<div class="panel-footer">',
+                                    '<span class="pull-left">Détails sur les connexions du jour</span>',
+                                    '<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>',
+                                    '<div class="clearfix"></div>',
+                                '</div>',
+                            '</a>',
+                        '</div>',
+                    '</div>',
+                '</div>',
+                '<!-- /.row -->',
 
+                '<div class="row">',
+                    '<div class="col-lg-12">',
+                        '<div class="panel panel-default">',
+                            '<div class="panel-heading">',
+                                '<h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Connexions du jour</h3>',
+                            '</div>',
+                            '<div class="panel-body">',
+                                '<div id="morris-area-chart"></div>',
+                            '</div>',
+                        '</div>',
+                    '</div>',
+                '</div>',
+                '<!-- /.row -->'; */
 
-<!-- permet d'afficher le carré fond blanc --> 
-<div id="page-wrapper">
-
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Administration <small>Vue générale</small>
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li class="active">
-                                <i class="fa fa-dashboard"></i> En bref
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                    </div>
-                </div>
-                    
-
-<?php
-footer();
-ob_end_flush(); ?>
-
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-               
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-comments fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">WW</div>
-                                        <div>Nombre d'utilisateurs</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Détails sur les utilisateurs</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">XX</div>
-                                        <div>Nombre d'administrateurs </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Détails sur les administrateurs</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-yellow">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-shopping-cart fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">YY</div>
-                                        <div>Connexions depuis le premier jour</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Détails sur les connexions</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-support fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">ZZ</div>
-                                        <div>Connexion du jour</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Détails sur les connexions du jour</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Connexions du jour</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-area-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
+                //Ensemble de tableaux
+                /* <div class="row">
                     <div class="col-lg-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -165,7 +134,7 @@ ob_end_flush(); ?>
                             </div>
                         </div>
                     </div>
-                   <!-- <div class="col-lg-4">
+                  <!-- <div class="col-lg-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Transactions Panel</h3>
@@ -239,21 +208,12 @@ ob_end_flush(); ?>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- /.row -->
+                </div> 
+                <!-- /.row --> */
 
-            </div>
-            <!-- /.container-fluid -->
+            
 
-        </div>
-        <!-- /#page-wrapper -->
+footer();
 
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-   
-
-//</body> 
- -->
-
+//ob_end_flush(); 
+?>
